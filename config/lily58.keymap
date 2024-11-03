@@ -58,7 +58,7 @@
             >;
         };
 
-        setup_layer {
+        adjust_layer {
             bindings = <
 &trans       &trans          &trans        &trans  &trans  &trans                    &trans  &trans      &trans            &trans      &trans       &trans
 &bootloader  &trans          &trans        &trans  &trans  &trans                    &trans  &trans      &trans            &trans      &kp K_SLEEP  &trans
@@ -67,7 +67,7 @@
                                            &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans
             >;
 
-            label = "setup";
+            label = "adjust";
         };
     };
 };
