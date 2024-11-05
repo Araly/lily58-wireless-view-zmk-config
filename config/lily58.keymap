@@ -17,10 +17,10 @@
 	#undef MOVE_DOWN
 	#undef MOVE_LEFT
 	#undef MOVE_RIGHT
-	#define MOVE_UP MOVE_VERT(-MOUSE_MOVE_MAX)
-	#define MOVE_DOWN MOVE_VERT(MOUSE_MOVE_MAX)
-	#define MOVE_LEFT MOVE_HOR(-MOUSE_MOVE_MAX)
-	#define MOVE_RIGHT MOVE_HOR(MOUSE_MOVE_MAX)
+	#define MOVE_UP MOVE_Y(-MOUSE_MOVE_MAX)
+	#define MOVE_DOWN MOVE_Y(MOUSE_MOVE_MAX)
+	#define MOVE_LEFT MOVE_X(-MOUSE_MOVE_MAX)
+	#define MOVE_RIGHT MOVE_X(MOUSE_MOVE_MAX)
 
     keymap {
         compatible = "zmk,keymap";
