@@ -43,7 +43,7 @@
 &trans      &trans          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans                          &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &kp K_MUTE
 &trans      &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                          &kp MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &kp C_VOL_DN
 &trans      &msc SCRL_DOWN  &trans          &trans          &trans           &trans        &trans    &trans  &kp PLUS      &kp KP_N0        &kp KP_DOT       &trans           &trans  &trans
-                                            &trans          &trans           &trans        &trans    &trans  &trans        &mo 4            &trans
+                                            &trans          &trans           &trans        &trans    &trans  &trans        &trans           &trans
             >;
         };
 
@@ -54,7 +54,7 @@
 &trans  &trans  &trans    &kp PAGE_UP    &trans   &trans                    &kp F9    &kp F10   &kp F11  &kp F12    &trans     &kp BACKSLASH
 &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp END  &trans                    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp RIGHT  &trans
 &trans  &trans  &trans    &trans         &trans   &trans  &trans    &trans  &trans    &trans    &trans   &trans     &trans     &trans
-                          &trans         &mo 4    &trans  &trans    &trans  &kp DEL   &trans    &trans
+                          &trans         &trans   &trans  &trans    &trans  &kp DEL   &trans    &trans
             >;
         };
 
@@ -68,6 +68,15 @@
             >;
 
             label = "adjust";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust_condition {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
